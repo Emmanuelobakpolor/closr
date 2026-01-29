@@ -79,7 +79,7 @@ export default function GetStarted() {
                 <div className="w-2 h-2 bg-secondary rounded-full" />
                 <div className="w-2 h-2 bg-secondary rounded-full" />
               </div>
-              <h2 className="text-2xl font-bold mb-2">Welcome to Closer</h2>
+              <h2 className="text-2xl font-bold mb-2">Welcome to Closr</h2>
               <p className="text-muted-foreground text-sm">
                 Let's get your business details set up so we can personalize your experience.
               </p>
@@ -267,7 +267,7 @@ export default function GetStarted() {
 
             <div className="mb-6 p-4 bg-secondary/20 rounded-lg border border-secondary">
               <p className="text-sm text-muted-foreground">
-                We'll help you connect your WhatsApp Business account to Closer so you can manage all conversations in one place.
+                We'll help you connect your WhatsApp Business account to Closr so you can manage all conversations in one place.
               </p>
             </div>
 

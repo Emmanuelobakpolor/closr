@@ -32,7 +32,7 @@ export default function Dashboard() {
             <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
               <span className="text-primary font-bold text-sm">C</span>
             </div>
-            <span className="font-bold text-lg">Closer</span>
+            <span className="font-bold text-lg">Closr</span>
           </div>
           <button 
             onClick={() => setMobileMenuOpen(false)}

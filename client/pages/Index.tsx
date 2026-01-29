@@ -18,7 +18,7 @@ export default function Index() {
             <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
               <span className="text-white font-bold text-sm">C</span>
             </div>
-            <span className="font-bold text-lg">Closer</span>
+            <span className="font-bold text-lg">Closr</span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-sm text-foreground hover:text-primary">
@@ -73,7 +73,7 @@ export default function Index() {
                   </div>
                   <span className="text-sm font-semibold text-primary">Getting Started</span>
                 </div>
-                <h3 className="text-xl font-bold mb-3">Welcome to Closer</h3>
+                <h3 className="text-xl font-bold mb-3">Welcome to Closr</h3>
                 <p className="text-sm text-muted-foreground mb-4">
                   Let's get your business details set up so we can personalize your experience.
                 </p>
@@ -228,7 +228,7 @@ export default function Index() {
                 name: "Ojiyi Ezemma",
                 role: "Business Owner",
                 avatar: "OE",
-                text: "Closer has completely transformed how I manage my sales. It's simple, powerful, and gets the job done."
+                text: "Closr has completely transformed how I manage my sales. It's simple, powerful, and gets the job done."
               },
               {
                 name: "Tunde Adejare",
@@ -240,7 +240,7 @@ export default function Index() {
                 name: "Amara Nwankwo",
                 role: "Entrepreneur",
                 avatar: "AN",
-                text: "Finally, a platform built for African businesses. Closer understands our market perfectly."
+                text: "Finally, a platform built for African businesses. Closr understands our market perfectly."
               }
             ].map((testimonial, i) => (
               <div key={i} className="bg-white rounded-xl p-8 border border-border">
@@ -291,7 +291,7 @@ export default function Index() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <p className="text-muted-foreground mb-4">
-                Closer was born from a simple frustration: existing sales tools weren't built for African businesses. They were expensive, complex, and ignored the unique challenges we face.
+                Closr was born from a simple frustration: existing sales tools weren't built for African businesses. They were expensive, complex, and ignored the unique challenges we face.
               </p>
               <p className="text-muted-foreground">
                 We set out to build something different. A platform that's affordable, intuitive, and designed specifically for how African entrepreneurs do business. Today, we're proud to serve thousands of businesses across the continent.
@@ -394,7 +394,7 @@ export default function Index() {
                 <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-sm">C</span>
                 </div>
-                <span className="font-bold">Closer</span>
+                <span className="font-bold">Closr</span>
               </div>
               <p className="text-sm text-muted-foreground">Building the future of African commerce</p>
             </div>
@@ -423,7 +423,7 @@ export default function Index() {
             </div>
           </div>
           <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
-            <p>&copy; 2024 Closer. All rights reserved.</p>
+            <p>&copy; 2024 Closr. All rights reserved.</p>
           </div>
         </div>
       </footer>
