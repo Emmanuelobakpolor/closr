@@ -6,6 +6,7 @@ import storyImg from "@/assets/story.png";
 import team1Img from "@/assets/team1.png";
 import team2Img from "@/assets/team2.png";
 import team3Img from "@/assets/team3.png";
+import heroImg from "@/assets/image.png";
 
 export default function Index() {
   const scrollToSection = (e, id) => {
@@ -129,6 +130,32 @@ export default function Index() {
           transition: all 0.3s ease;
         }
 
+        .hide-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+
+        .hide-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+
+        .auto-scroll {
+          animation: scroll 30s linear infinite;
+        }
+
+        .auto-scroll:hover {
+          animation-play-state: paused;
+        }
+
         html {
           scroll-behavior: smooth;
         }
@@ -138,11 +165,20 @@ export default function Index() {
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b border-border transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
           <div className="flex items-center gap-2 animate-fade-in">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-sm">C</span>
+            <div className="flex items-center gap-2">
+              <div
+                className="rounded-full overflow-hidden flex"
+                style={{ width: 32, height: 32 }}
+              >
+                <div className="w-1/2 h-full bg-[#0B4F3C]" />
+                <div className="w-1/2 h-full bg-[#7FB8A6]" />
+              </div>
+              <span className="text-[#0B4F3C] font-semibold text-xl">
+                Closr
+              </span>
             </div>
-            <span className="font-bold text-lg">Closr</span>
           </div>
+
           <nav className="hidden md:flex items-center gap-8">
             <a href="#features" onClick={(e) => scrollToSection(e, 'features')} className="text-sm text-foreground hover:text-primary transition-colors">
               Features
@@ -189,42 +225,20 @@ export default function Index() {
               </div>
             </div>
             <div className="flex justify-center animate-slide-in-right">
-              <div className="bg-white rounded-2xl p-6 shadow-lg max-w-md w-full border border-border transition-all hover:shadow-xl">
-                <div className="mb-4 flex items-center gap-2">
-                  <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                    <div className="w-5 h-5 bg-primary rounded-full animate-float" />
-                  </div>
-                  <span className="text-sm font-semibold text-primary">Getting Started</span>
-                </div>
-                <h3 className="text-xl font-bold mb-3">Welcome to Closr</h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Let's get your business details set up so we can personalize your experience.
-                </p>
-                <div className="space-y-2 mb-6">
-                  <div className="flex items-center gap-3 animate-fade-in-up stagger-1">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white text-xs font-bold">1</span>
+              <div className="relative">
+                <img 
+                  src={heroImg} 
+                  alt="Hero Illustration" 
+                  className="rounded-2xl shadow-2xl max-w-md w-full h-auto object-cover animate-float transition-all hover:scale-105"
+                />
+                <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-lg border border-border animate-fade-in-up stagger-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                      <div className="w-4 h-4 bg-primary rounded-full animate-pulse" />
                     </div>
-                    <span className="text-sm">Business Details</span>
-                  </div>
-                  <div className="flex items-center gap-3 animate-fade-in-up stagger-2">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white text-xs font-bold">2</span>
-                    </div>
-                    <span className="text-sm">Location & Currency</span>
-                  </div>
-                  <div className="flex items-center gap-3 animate-fade-in-up stagger-3">
-                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-white text-xs font-bold">3</span>
-                    </div>
-                    <span className="text-sm">Connect WhatsApp</span>
+                    <span className="text-sm font-semibold text-primary">Live Demo</span>
                   </div>
                 </div>
-                <Link to="/get-started">
-                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all hover:scale-105">
-                    Continue Setup
-                  </Button>
-                </Link>
               </div>
             </div>
           </div>
@@ -232,16 +246,24 @@ export default function Index() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-primary py-12 px-4 sm:px-6 lg:px-8">
+      <section className="bg-primary py-12 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="flex gap-12 overflow-x-auto scroll-smooth pb-4 hide-scrollbar auto-scroll">
             {[
-              { value: "10k+", label: "Active Users" },
+              { value: "10k+", label: "Active Vendors" },
               { value: "N2.5B+", label: "Revenue Processed" },
               { value: "<5secs", label: "Response Time" },
-              { value: "98%", label: "Uptime" }
+              { value: "98%", label: "Uptime" },
+              { value: "24/7", label: "Support" },
+              { value: "50+", label: "Cities" },
+              { value: "10k+", label: "Active Vendors" },
+              { value: "N2.5B+", label: "Revenue Processed" },
+              { value: "<5secs", label: "Response Time" },
+              { value: "98%", label: "Uptime" },
+              { value: "24/7", label: "Support" },
+              { value: "50+", label: "Cities" }
             ].map((stat, i) => (
-              <div key={i} className={`animate-fade-in-up stagger-${i + 1}`}>
+              <div key={i} className={`flex-shrink-0 min-w-[200px] text-center animate-fade-in-up stagger-${i + 1}`}>
                 <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
                 <p className="text-primary-foreground/80 text-sm">{stat.label}</p>
               </div>
